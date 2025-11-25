@@ -1,6 +1,6 @@
 # Swaglabs Mobile Automation Project
 
-## Deskripsi Proyek
+## Deskripsi 
 Proyek ini adalah kerangka kerja otomatisasi pengujian mobile yang dibangun menggunakan Appium untuk menguji aplikasi demo Swaglabs. Tujuannya adalah untuk mengotomatisasi skenario pengujian kunci untuk fungsionalitas login, manajemen inventaris, dan penambahan produk ke keranjang belanja, memastikan kualitas dan keandalan aplikasi mobile.
 
 ## Teknologi yang Digunakan
