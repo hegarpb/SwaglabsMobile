@@ -9,6 +9,21 @@ import com.swaglabs.mobile.screens.LoginScreen;
 
 public class AddToCartTest {
     @Test
+    public void addSingleProductsTest() {
+        LoginScreen loginScreen = new LoginScreen(DriverManager.getDriver());
+        InventoryScreen inventory = new InventoryScreen(DriverManager.getDriver());
+
+        loginScreen.login();
+        inventory.addToCartByProductName("Sauce Labs Backpack");
+
+        int expected = 1;
+        int actual = inventory.getTotalCart();
+
+        Assert.assertEquals(actual, expected);
+        DriverManager.quitDriver();
+    }
+
+    @Test
     public void addMultipleProductsTest() {
         LoginScreen loginScreen = new LoginScreen(DriverManager.getDriver());
         InventoryScreen inventory = new InventoryScreen(DriverManager.getDriver());
