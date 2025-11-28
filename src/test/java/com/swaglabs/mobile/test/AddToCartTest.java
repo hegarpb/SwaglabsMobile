@@ -6,16 +6,16 @@ import org.testng.annotations.Test;
 import com.swaglabs.mobile.driver.DriverManager;
 import com.swaglabs.mobile.screens.InventoryScreen;
 import com.swaglabs.mobile.screens.LoginScreen;
+import com.swaglabs.mobile.utils.DragPositionUtil;
 
 public class AddToCartTest {
-    @Test
+    @Test(priority = 1)
     public void addSingleProductsTest() {
         LoginScreen loginScreen = new LoginScreen(DriverManager.getDriver());
         InventoryScreen inventory = new InventoryScreen(DriverManager.getDriver());
 
         loginScreen.login();
-        inventory.addToCartByProductName("Sauce Labs Backpack");
-
+        inventory.drag(new DragPositionUtil(200, 100));
         int expected = 1;
         int actual = inventory.getTotalCart();
 
